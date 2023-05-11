@@ -32,6 +32,7 @@ export default defineConfig({
         },
     rollupOptions: {
         external: ['@emdgroup-liquid/liquid', '@emdgroup-liquid/liquid/dist/react'],
+        // No success either with this configuration:
         // external: (id) => {
         //   console.log('* ', id);
         //   if(id.includes('@emdgroup-liquid/liquid')) console.log('LIQUID', id);
