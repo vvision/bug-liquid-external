@@ -57,6 +57,11 @@ rollupOptions: {
 }
 ```
 
+There is still some liquid declaration at the start of the file:
+```javascript
+import { LdTypo as ae, LdButton as fe } from "@emdgroup-liquid/liquid/dist/react";
+```
+
 It seems that more configuration is needed in order to successfully exclude Liquid from the resulting bundle.
 
 # Run the demo
