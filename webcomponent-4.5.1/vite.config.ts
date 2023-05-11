@@ -32,11 +32,6 @@ export default defineConfig({
         },
     rollupOptions: {
         external: ['liquid'],
-        // external: (id) => {
-        //   console.log('* ', id);
-        //   if(id.includes('@emdgroup-liquid/liquid')) console.log('LIQUID', id);
-        //   return id.includes('@emdgroup-liquid/liquid');
-        // },
     }
 },
 })
