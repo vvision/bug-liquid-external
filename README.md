@@ -3,15 +3,16 @@ bug-liquid-external
 
 This demo is used to demonstrate a way to exclude Liquid from web component bundles, which was working until Liquid 4.5.1 included.
 
-It provided a second component using Liquid 4.6.0, which fails to exclude Liquid dependency from the bundle.
+It provides a second component using Liquid 4.6.0, which fails to exclude Liquid dependency from the bundle.
 
 One must take into account that our main goal is to exclude Liquid from the resulting bundles of our web component, to let the frontend provide Liquid components.
 
 # Context
 
-There are two component declaring Liquid as an external in this demo:
+There are two component declaring Liquid as an external dependency in this demo:
 * `webcomponent-4.5.1` is a webcomponent using Liquid 4.5.1.
 * `webcomponent-4.6.0` is a webcomponent using Liquid 4.6.0.
+
 They are both built with vite and uses preact and preact-custom-element.
 
 Backend is responsible for serving both component JS bundles.
@@ -57,7 +58,7 @@ rollupOptions: {
 }
 ```
 
-There is still some liquid declaration at the start of the file:
+But there is still a liquid declaration at the start of the file:
 ```javascript
 import { LdTypo as ae, LdButton as fe } from "@emdgroup-liquid/liquid/dist/react";
 ```
